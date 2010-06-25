@@ -4,7 +4,7 @@ application domain experts to write multi-core enabled applications without
 reasoning about threads, the parallel algorithm, or details of scheduling."
 
 For more deatils on CnC, see:
-http://software.intel.com/en-us/articles/intel-concurrent-collections-for-cc/
+http://habanero.rice.edu/cnc.html
 
 
 Other Implementations
