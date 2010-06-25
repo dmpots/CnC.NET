@@ -1,0 +1,175 @@
+BLOCK: 25
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:06.2143785 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:03.8636136 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:03.0656934 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:02.8337166 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:03.2896710 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:03.3216678 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:03.4076592 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:03.4730000 
+BLOCK: 50
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:05.1250000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:02.8580000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:02.0970000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:01.7360000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:01.5610000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:01.5380000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:01.5360000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:01.5560000 
+BLOCK: 125
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:05.3280000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:03.1930000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:02.5190000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:02.2620000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:02.0350000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:01.9930000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:01.9910000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:01.9830000 
+BLOCK: 250
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:06.1380000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:04.3790000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:04.1330000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:04.1330000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:04.1480000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:04.0920000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:04.0360000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:02.8980000 
+BLOCK: 500
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:13.1540000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:13.1680000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:13.1500000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:09.0420000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:09.0300000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:07.6250000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:07.5530000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:08.4750000 
+BLOCK: 1000
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:20.9980000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:20.9760000 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:21.0811752 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:21.4391437 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:21.5381536 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:21.4911489 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:22.3092307 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:30.7350732 
+BLOCK: 2000
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(1 threads) execution a matrix of size 2000 x 2000 : 00:00:26.2016199 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(2 threads) execution a matrix of size 2000 x 2000 : 00:00:26.2836281 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(3 threads) execution a matrix of size 2000 x 2000 : 00:00:26.4186416 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(4 threads) execution a matrix of size 2000 x 2000 : 00:00:26.9046902 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(5 threads) execution a matrix of size 2000 x 2000 : 00:00:26.7426740 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(6 threads) execution a matrix of size 2000 x 2000 : 00:00:27.2427240 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(7 threads) execution a matrix of size 2000 x 2000 : 00:00:28.0178015 
+Starting Execution 
+Finisehd Execution 
+The time taken for parallel(8 threads) execution a matrix of size 2000 x 2000 : 00:00:40.5730569 

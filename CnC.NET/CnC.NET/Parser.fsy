@@ -1,0 +1,99 @@
+﻿%{
+open CnCAst
+
+
+let defaultTagType = "int"
+let defaultTagDescription = [BaseTypeComponent {ComponentType = defaultTagType; ComponentName = "_default"}]
+%}
+
+%token<string> NAME
+%token<string> TYPE
+%token ENV
+%token SEMI COLON_COLON COLON COMMA EOF
+%token L_ARROW R_ARROW L_PAREN R_PAREN L_ANGLE R_ANGLE L_BRACKET R_BRACKET 
+
+%start start
+%type <CnCAst.Graph> start
+%%
+
+start: statements EOF { List.rev $1}
+
+statements: terminated_declaration {[Declaration $1]}
+		  | terminated_relation    {[Relation $1]}
+		  | statements terminated_declaration {(Declaration $2) :: $1}
+		  | statements terminated_relation    {(Relation $2) :: $1}
+
+terminated_declaration: declaration SEMI {$1}
+
+declaration: item_declaration {ItemDecl $1}
+		   | tag_declaration  {TagDecl $1}
+		   | step_declaration {StepDecl $1}
+
+terminated_relation: relation SEMI {$1}
+
+relation: step_execution    {StepExecution $1}
+		| step_prescription {StepPrescription $1}
+		
+step_execution: item_instance_list R_ARROW step_instance {(List.rev($1), $3, [])}
+			  | item_instance_list R_ARROW step_instance R_ARROW output_instance_list {(List.rev($1), $3, List.rev($5))}
+			  | step_instance R_ARROW output_instance_list {([],$1, List.rev($3))}
+			  
+			  // Commented out so that we can distinguish item instance list from instance list
+			  //| instance_list L_ARROW step_instance	{([],$3, List.rev($1))}
+			  //| instance_list L_ARROW step_instance L_ARROW item_instance_list {(List.rev($5), $3, List.rev($1))}
+			  //| step_instance L_ARROW item_instance_list {(List.rev($3), $1, [])}\
+			  
+			  
+step_prescription: tag_instance COLON_COLON step_instance_list {($1, List.rev $3)}
+				 | step_instance_list COLON_COLON tag_instance {($3, List.rev $1)}
+
+item_instance_list: item_instance {[$1]}
+				  | item_instance_list COMMA item_instance { $3 :: $1}
+				 
+output_instance_list: item_instance {[ItemInst $1]}
+			 | tag_instance  {[TagInst  $1]}
+			 | output_instance_list COMMA item_instance {(ItemInst $3) :: $1}
+			 | output_instance_list COMMA tag_instance  {(TagInst $3) :: $1}		
+			 
+tag_instance: L_ANGLE NAME tag_description R_ANGLE { {TagInstance.Name=$2; TagInstance.Tag=$3}  }
+			| L_ANGLE NAME R_ANGLE {{TagInstance.Name=$2; TagInstance.Tag=defaultTagDescription} }
+			
+tag_description: COLON tag_component_list {List.rev $2}
+
+tag_component_list: tag_component {[$1]}
+				  | tag_component_list COMMA tag_component {$3 :: $1}
+
+tag_component: NAME NAME { BaseTypeComponent {ComponentType=$1; ComponentName=$2} }
+			 | NAME { BaseTypeComponent {ComponentType=defaultTagType; ComponentName=$1} }
+			 | NAME NAME L_PAREN param_list R_PAREN {FunctionTypeComponent {FunctionName=$2; ReturnType=$1; ParameterList=List.rev $4} }
+			 | NAME L_PAREN param_list R_PAREN { FunctionTypeComponent {FunctionName=$1; ReturnType=defaultTagType; ParameterList=List.rev $3} } 
+
+param_list:	param {[$1]}
+		  | param_list COMMA param {$3 :: $1}
+
+param: NAME {$1}
+
+item_instance: L_BRACKET item_definition tag_description R_BRACKET { {ItemInstance.Name=snd($2); ItemInstance.Type=fst($2); ItemInstance.Tag=$3} }
+			 | L_BRACKET item_definition R_BRACKET { {ItemInstance.Name=snd($2); ItemInstance.Type=fst($2); ItemInstance.Tag=defaultTagDescription} }
+			 
+item_definition: NAME NAME {($1, $2)}
+			   | TYPE NAME {($1, $2)}
+			   | NAME {(defaultTagType, $1)}
+			   
+step_instance_list: step_instance {[$1]}
+				  | step_instance_list COMMA step_instance	{$3 :: $1}
+				  
+step_instance: L_PAREN NAME R_PAREN { UserDefinedStep {UserStepInstance.Name=$2; UserStepInstance.Tag=defaultTagDescription } }
+			 | L_PAREN NAME tag_description R_PAREN { UserDefinedStep {UserStepInstance.Name=$2; UserStepInstance.Tag=$3 } }
+			 | ENV {Env}
+			 
+item_declaration: item_instance {$1}
+
+tag_declaration: tag_instance {$1}
+
+step_declaration: step_instance	{$1}		 				  
+
+	  
+
+
+

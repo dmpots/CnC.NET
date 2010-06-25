@@ -1,0 +1,19 @@
+This is a prototye implementation of the Concurrent Collections (CnC)
+programming model for .NET. CnC is a programming model that "that allows
+application domain experts to write multi-core enabled applications without
+reasoning about threads, the parallel algorithm, or details of scheduling."
+
+For more deatils on CnC, see:
+http://software.intel.com/en-us/articles/intel-concurrent-collections-for-cc/
+
+
+Other Implementations
+C++
+http://software.intel.com/en-us/articles/intel-concurrent-collections-for-cc
+
+Haskell
+http://hackage.haskell.org/packages/archive/haskell-cnc/latest/doc/html/Intel-Cnc.html
+
+
+The software is released under the permissive BSD 3 open source license. See
+the LICENSE file for full details.

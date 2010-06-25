@@ -1,0 +1,57 @@
+﻿{
+open Parser
+open System.IO
+open System.Text
+(*
+%token<string> NAME
+%token<string> TYPE
+%token ENV
+%token SEMI COLON_COLON COLON COMMA
+%token L_ARROW R_ARROW L_PAREN R_PAREN L_ANGLE R_ANGLE L_BRACKET R_BRACKET
+*)
+
+let incrementLineNumber (lexbuf : Microsoft.FSharp.Text.Lexing.LexBuffer<_>)  =
+	lexbuf.EndPos <- lexbuf.EndPos.NextLine
+}
+
+let ident = ['A'-'Z' 'a'-'z'] ['A'-'Z' 'a'-'z' '0'-'9' '_']*
+let typeId = ['A'-'Z' 'a'-'z'] ['A'-'Z' 'a'-'z' '0'-'9' '_']* ('[' ','* ']')?
+let env = "env" | "ENV" | "Env"
+let whitespace = [' ' '\t']+
+let newline = '\n' | '\r' '\n'
+
+rule token = parse
+	| env   {ENV}	
+	| ident {NAME(Lexing.lexeme lexbuf)}
+	| typeId{TYPE(Lexing.lexeme lexbuf)}	
+	| ';'   {SEMI}
+	| "::"  {COLON_COLON}
+	| ':'   {COLON}
+	| ','	{COMMA}
+	| "<-"  {L_ARROW}
+	| "->"	{R_ARROW}
+	| '('   {L_PAREN}
+	| ')'   {R_PAREN}
+	| '<'   {L_ANGLE}
+	| '>'   {R_ANGLE}
+	| '['   {L_BRACKET}
+	| ']'   {R_BRACKET}
+	| whitespace {token lexbuf}
+	| "//"  {comment lexbuf; token lexbuf }
+	| newline  { incrementLineNumber lexbuf; token lexbuf }
+	| eof   {EOF}
+	| _        {let pos = lexbuf.EndPos in failwithf "Invalid lexer input: '%s' at (%d,%d)" (Lexing.lexeme lexbuf) pos.Line pos.Column }
+and comment = parse
+	| [^ '\n']* '\n' { incrementLineNumber lexbuf }	
+	| [^ '\n']* eof  {}
+	
+{
+
+let runTest fileName =
+	use inputReader = File.OpenText(fileName) in
+	let lexbuf = Lexing.from_text_reader Encoding.ASCII inputReader in
+    while not lexbuf.IsPastEndOfStream do
+        printfn "%A" (token lexbuf)
+    done;
+	()
+}

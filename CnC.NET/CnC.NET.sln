@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CnC.NET", "CnC.NET\CnC.NET.fsproj", "{2F4940E7-4A0D-4ED6-990B-47DDFE509DFC}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CnCRuntime", "CnCRuntime\CnCRuntime.fsproj", "{64C4F78E-2063-4E73-B5E7-70EE05ACB093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F4940E7-4A0D-4ED6-990B-47DDFE509DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4940E7-4A0D-4ED6-990B-47DDFE509DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4940E7-4A0D-4ED6-990B-47DDFE509DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4940E7-4A0D-4ED6-990B-47DDFE509DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C4F78E-2063-4E73-B5E7-70EE05ACB093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C4F78E-2063-4E73-B5E7-70EE05ACB093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C4F78E-2063-4E73-B5E7-70EE05ACB093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C4F78E-2063-4E73-B5E7-70EE05ACB093}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
